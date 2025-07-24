@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>UI Components Collection</title>
+        <meta name="description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- js -->
+        <script
+            src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    "
+            defer
+        ></script>
+        <script src="js/main.js" type="module"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header js-header">
+            <div class="header-inner">
+                <h1 class="header-logo">
+                    <a href="index.html">Leaf Design Lab</a>
+                </h1>
+
+                <dialog class="header-menu js-header-menu" aria-label="メニュー">
+                    <nav class="header-nav">
+                        <ul class="header-list js-header-list">
+                            <li class="header-item">
+                                <button class="hamburger-close-button js-hamburger-close-button" aria-label="閉じるボタン">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </li>
+                            <li class="header-item">
+                                <button class="dropdown-button js-dropdown-button">
+                                    <span>About</span>
+                                    <span class="dropdown-button--arrow"></span>
+                                </button>
+                                <ul class="dropdown-submenu">
+                                    <li class="dropdown-item"><a href="about-company.html">Company</a></li>
+                                    <li class="dropdown-item"><a href="about-team.html">Team</a></li>
+                                    <li class="dropdown-item"><a href="about-mission.html">Mission</a></li>
+                                </ul>
+                            </li>
+                            <li class="header-item">
+                                <button class="dropdown-button js-dropdown-button">
+                                    <span>Service</span>
+                                    <span class="dropdown-button--arrow"></span>
+                                </button>
+                                <ul class="dropdown-submenu">
+                                    <li class="dropdown-item"><a href="#">Web Design</a></li>
+                                    <li class="dropdown-item"><a href="#">Development</a></li>
+                                    <li class="dropdown-item"><a href="#">Marketing</a></li>
+                                </ul>
+                            </li>
+                            <li class="header-item">
+                                <button class="dropdown-button js-dropdown-button">
+                                    <span>Blog</span>
+                                    <span class="dropdown-button--arrow"></span>
+                                </button>
+                                <ul class="dropdown-submenu">
+                                    <li class="dropdown-item"><a href="#">News</a></li>
+                                    <li class="dropdown-item"><a href="#">Tips</a></li>
+                                    <li class="dropdown-item"><a href="#">Case Study</a></li>
+                                </ul>
+                            </li>
+                            <li class="header-item">
+                                <a href="#" class="header-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </dialog>
+                <button class="header-hamburger-button js-hamburger-button" aria-label="ハンバーガーボタン">
+                    <span class="header-hamburger-button-line">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+            </div>
+        </header>
+        <!-- the end of header -->
+        
+        <!-- kv -->
+        <div class="kv js-kv">
+            <!-- splide -->
+            <div class="splide kv-slider">
+                <h2 class="kv-title section-title section-title--center">Slider</h2>
+                <div class="splide__track kv-slider-inner">
+                    <ul class="kv-list splide__list">
+                        <li class="kv-item splide__slide">
+                            <img src="img/php.svg" width="512" height="512" alt="ダミー画像" />
+                        </li>
+                        <li class="kv-item splide__slide">
+                            <img src="img/html.svg" width="500" height="500" alt="ダミー画像" />
+                        </li>
+                        <li class="kv-item splide__slide">
+                            <img src="img/css.svg" width="500" height="500" alt="ダミー画像" />
+                        </li>
+                        <li class="kv-item splide__slide">
+                            <img src="img/javascript.svg" width="500" height="500" alt="ダミー画像" />
+                        </li>
+                        <li class="kv-item splide__slide">
+                            <img src="img/github.svg" width="500" height="500" alt="ダミー画像" />
+                        </li>
+                        <li class="kv-item splide__slide">
+                            <img src="img/typescript.svg" width="500" height="500" alt="ダミー画像" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- the end of kv -->
+        <main>
+            <div class="l-container">
+                <!-- accordion -->
+                <section class="accordion l-section">
+                    <h2 class="section-title section-title--center">Accordion</h2>
+                    <div class="accordion-inner">
+                        <details class="accordion-details js-accordion-details">
+                            <summary class="accordion-summary js-accordion-summary">Q.クレジットカードで支払えますか？</summary>
+                            <div class="accordion-content-box js-accordion-content">
+                                <p class="accordion-answer">A. はい、ご利用いただけます。現在、Visa、MasterCard、JCBなど主要な国際ブランドのクレジットカードに対応しています。お支払いはオンラインでの決済が可能で、SSLにより通信も暗号化されていますので、安心してご利用ください。お振込や請求書払いをご希望の場合は別途ご相談いただければ柔軟に対応いたします。</p>
+                            </div>
+                        </details>
+                        <details class="accordion-details js-accordion-details">
+                            <summary class="accordion-summary js-accordion-summary">Q.クレジットカードで支払えますか？</summary>
+                            <div class="accordion-content-box js-accordion-content">
+                                <p class="accordion-answer">A. はい、お見積もりはすべて無料で対応しています。お問い合わせフォームまたはお電話からご相談内容をお知らせいただければ、1〜3営業日以内に担当者からご連絡いたします。ご提案段階でのヒアリングや簡易な構成案も無償で対応可能ですので、お気軽にご相談ください。</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+                <!-- the end of accordion -->
+
+                <!-- tab menu -->
+                <section class="tab-menu l-section">
+                    <div class="tab-menu-inner">
+                        <h2 class="section-title section-title--center">Tab Menu</h2>
+                        <ul class="tab-menu-list">
+                            <li class="tab-menu-item"><button class="js-tab-menu-item is-active">会社紹介</button></li>
+                            <li class="tab-menu-item"><button class="js-tab-menu-item">サービス内容</button></li>
+                            <li class="tab-menu-item"><button class="js-tab-menu-item">制作実績</button></li>
+                            <li class="tab-menu-item"><button class="js-tab-menu-item">お客様の声</button></li>
+                        </ul>
+                        <div class="tab-menu-contents">
+                            <div class="tab-menu-content js-tab-menu-content is-active">
+                                <p>私たちは東京都内に拠点を置くクリエイティブチームです。Web制作を中心に、ブランディング・動画制作・マーケティングまで多様なスキルをもつメンバーが在籍しています。お客様の課題をデザインと技術で解決し、「伝わる」を「結果」につなげることを大切にしています。</p>
+                            </div>
+                            <div class="tab-menu-content js-tab-menu-content">
+                                <p>Webサイトの新規制作・リニューアルから、ランディングページ、ECサイト、CMSの導入、保守運用まで幅広く対応可能です。私たちは、ただサイトを作るだけではなく、訪問者の行動や感情に寄り添い、「見られる」だけでなく「使われる」サイトを目指します。</p>
+                            </div>
+                            <div class="tab-menu-content js-tab-menu-content">
+                                <p>これまで、飲食・医療・教育・IT・不動産など幅広い業種の案件を手がけてきました。単なるデザインだけではなく、事業戦略に深く関わるような長期的なパートナーシップも多く、結果に繋がるご提案を大切にしています。</p>
+                            </div>
+                            <div class="tab-menu-content js-tab-menu-content">
+                                <p>「丁寧でスピード感のある対応に安心した」「漠然としたイメージを形にしてもらえた」など、ありがたいお声を多数いただいています。初めてWeb制作を依頼される方でも安心してご相談いただける体制を整えています。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- the end of tab menu -->
+                <!-- modal -->
+                <section class="modal l-section">
+                    <h2 class="section-title section-title--center">Modal Window</h2>
+                    <dialog class="modal-window js-modal-window" aria-label="モーダル">
+                        <div class="modal-inner js-modal-inner">
+                            <div class="modal-contents js-modal-contents">
+                                <button class="modal-close-button js-modal-close-button" aria-label="閉じるボタン"></button>
+                                <p class="modal-text">ご連絡ありがとうございます。いただいた内容を確認し、担当者より3営業日以内にご返信させていただきます。なお、お急ぎの場合はお電話にて直接お問い合わせください。今後とも私たちのサービスをよろしくお願いいたします。</p>
+                            </div>
+                        </div>
+                    </dialog>
+                    <div class="modal-overlay js-modal-overlay"></div>
+                    <button class="modal-open-button js-modal-open-button">モーダルOPEN</button>
+                </section>
+                <!-- the end of modal -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="index.html">Leaf Design Lab</a>
+                </div>
+                <ul class="footer-list">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy & Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-copy">
+                <small>&copy; 2025 Leaf Design Lab. All rights reserved.</small>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+@use "../global" as g;
+
+/*!
+page > kv
+------------------------------
+*/
+
+.kv {
+    margin-top: 64rem;
+    height: calc(100vh - 64rem);
+    padding: 16rem;
+    border-bottom: 1rem solid var(--border-white);
+    position: relative;
+}
+
+.kv-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 32rem;
+    @include g.mq() {
+        top: 106rem;
+    }
+}
+
+.kv-slider,
+.kv-slider-inner {
+    height: 100%;
+}
+
+.kv-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.kv-item {
+    height: 100%;
+    border: 1px solid var(--border-white);
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+    }
+}

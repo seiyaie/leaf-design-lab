@@ -1,0 +1,63 @@
+@use "../global" as g;
+
+/*!
+page > tab-menu
+------------------------------
+*/
+
+.tab-menu {
+    border: 1rem solid var(--border-white);
+}
+
+.tab-menu-inner {
+    width: 95%;
+    margin-inline: auto;
+}
+
+.tab-menu-list {
+    display: flex;
+    margin-top: 32rem;
+}
+
+.tab-menu-item {
+    font-weight: bold;
+    font-size: 12rem;
+    flex: 1;
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 40rem;
+    transition: opacity 0.4s;
+    @include g.mq() {
+        font-size: 18rem;
+    }
+}
+
+.tab-menu-item button {
+    border-bottom: 2px solid var(--border-selected);
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &.is-active {
+        opacity: 1;
+    }
+}
+
+.tab-menu-content {
+    font-size: 12rem;
+    display: none;
+    padding: 20px;
+    @include g.mq() {
+        font-size: 16rem;
+    }
+
+    &.is-active {
+        display: block;
+    }
+}

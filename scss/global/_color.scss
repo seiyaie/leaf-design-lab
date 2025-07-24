@@ -1,0 +1,24 @@
+/*!
+global > color
+------------------------------
+*/
+
+:root {
+    //background colors
+    --bg-base: #222222;
+    --bg-base-light: #1a1a1a;
+    --bg-black: #000000;
+    --bg-white: #ffffff;
+    --mask-color: rgba(255, 255, 255, 0.2);
+    --light-black: rgba(0, 0, 0, 0.3);
+    --accordion-bg: #eeeeee;
+    //border color
+    --border-white: #ffffff;
+    --border-selected: #7a3ada;
+    //font colors
+    --font-black: #000000;
+    --font-white: #fff;
+    //hover colors
+    --hover-base: #f0f0f0;
+    --hover-secondary: #666666;
+}

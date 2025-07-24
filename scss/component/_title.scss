@@ -1,0 +1,17 @@
+@use "../global" as g;
+
+/*!
+component > title
+------------------------------
+*/
+
+.section-title {
+    font-weight: bold;
+    font-size: 24rem;
+    font-family: var(--font-family-en);
+
+    &--center {
+        font-size: 32rem;
+        text-align: center;
+    }
+}

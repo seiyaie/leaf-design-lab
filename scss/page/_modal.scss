@@ -1,0 +1,100 @@
+@use "../global" as g;
+
+/*!
+page > modal
+------------------------------
+*/
+
+.modal {
+    text-align: center;
+    border: 2px solid var(--border-white);
+}
+
+.modal-window {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.modal-window::backdrop {
+    background-color: transparent;
+}
+
+.modal-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-contents {
+    background-color: var(--bg-white);
+    padding: 60rem;
+    width: 90%;
+    max-width: 800rem;
+    position: relative;
+}
+
+.modal-close-button {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 40rem;
+    height: 40rem;
+}
+.modal-close-button::before,
+.modal-close-button::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 2px;
+    background-color: var(--bg-black);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.modal-close-button::before {
+    transform: rotate(45deg);
+}
+
+.modal-close-button::after {
+    transform: rotate(-45deg);
+}
+
+.modal-text {
+    font-size: 16rem;
+    @include g.mq() {
+        font-size: 24rem;
+    }
+}
+
+.modal-overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--mask-color);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+}
+
+.modal-open-button {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 24rem;
+    text-align: center;
+    width: 320rem;
+    background-color: var(--bg-black);
+    color: var(--font-white);
+    border: 1px solid var(--border-white);
+    border-radius: 12rem;
+    padding: 16rem;
+    margin-top: 32rem;
+}

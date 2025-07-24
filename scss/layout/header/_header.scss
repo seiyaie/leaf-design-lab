@@ -1,0 +1,203 @@
+@use "../../global" as g;
+
+/*!
+layout > header > header
+------------------------------
+*/
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 64rem;
+    background-color: var(--bg-base);
+    color: var(--font-white);
+    z-index: var(--z-index-header);
+    border-bottom: 1rem solid var(--border-white);
+    font-family: var(--font-family-en);
+    @include g.mq() {
+        height: 108rem;
+    }
+    &.is-fixed {
+        position: fixed;
+        top: -64rem;
+        right: 0;
+        width: 100%;
+    }
+}
+
+.header-inner {
+    width: 90%;
+    height: 100%;
+    // max-width: 1300rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: inline-block;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-nav {
+    height: 100%;
+}
+
+.header-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .header-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.header-item {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .header-item {
+        width: 160rem;
+    }
+}
+
+.header-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--hover-base);
+        }
+    }
+    @include g.mq() {
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color:var(--hover-secondary);
+            }
+        }
+    }
+}
+
+.header-hamburger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    width: 20rem;
+    height: 20rem;
+    @include g.mq() {
+        display: none;
+    }
+}
+
+.header-hamburger-button-line {
+    width: 20rem;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+        width: 20rem;
+        height: 1rem;
+        background-color: var(--bg-white);
+    }
+}
+
+.header-menu {
+    inset-inline-start: unset;
+    inset-inline-end: unset;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    background-color: var(--mask-color);
+    backdrop-filter: blur(10px);
+    color: var(--font-black);
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .header-menu {
+        display: block;
+        width: auto;
+        height: 100%;
+        background-color: transparent;
+        position: static;
+        margin: 0;
+        padding: 0;
+        border: none;
+        color: var(--font-white);
+    }
+}
+
+.header-menu::backdrop {
+    display: none;
+}
+
+.hamburger-close-button {
+    display: flex;
+    height: 100%;
+    padding: 16px;
+    width: 100%;
+}
+
+.hamburger-close-button:hover {
+    background-color: var(--hover-base);
+}
+
+.hamburger-close-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24rem;
+    span {
+        width: 20rem;
+        height: 2rem;
+        background-color: var(--bg-black);
+
+        &:nth-child(1) {
+            // transform: scale(1.2) translateY(6rem) rotate(-36deg);
+            rotate: 45deg;
+            transform: translateY(1rem) translateX(1rem);
+        }
+        &:nth-child(2) {
+            // transform: scale(1.2) translateY(-6rem) rotate(36deg);
+            rotate: -45deg;
+            transform: translateY(-1rem);
+        }
+    }
+    @include g.mq() {
+        display: none;
+    }
+}

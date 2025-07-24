@@ -1,0 +1,90 @@
+@use "../global" as g;
+
+/*!
+page > accordion
+------------------------------
+*/
+
+.accordion {
+  border: 1rem solid var(--border-white);
+}
+
+.accordion-inner {
+  display: grid;
+  gap: 24rem;
+  margin-top: 32rem;
+}
+
+.accordion-details {
+  width: 90%;
+  max-width: 600rem;
+  margin-inline: auto;
+  background-color: var(--accordion-bg);
+}
+
+.accordion-summary {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--bg-black);
+  color: var(--font-white);
+  border: 1rem solid var(--border-white);
+  padding: 0.5em;
+  font-weight: bold;
+  position: relative;
+  font-size: 14rem;
+  @include g.mq() {
+      font-size: 18rem;
+  }
+}
+
+.accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-summary::before,
+.accordion-summary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  background-color: var(--bg-white);
+}
+
+.accordion-summary::before {
+  width: 14rem;
+  height: 2rem;
+  right: 8rem;
+  @include g.mq() {
+    width: 16rem;
+    height: 2rem;
+    right: 9rem;
+  }
+}
+
+.accordion-summary::after {
+  width: 2rem;
+  height: 14rem;
+  right: 14rem;
+  transition: rotate 0.3s;
+  @include g.mq() {
+      width: 2rem;
+      height: 16rem;
+      right: 16rem;
+  }
+}
+
+.accordion-details[open] .accordion-summary::after {
+  rotate: 90deg;
+}
+
+.accordion-content-box {
+  overflow: hidden;
+}
+
+.accordion-answer {
+  color: var(--font-black);
+  padding: 8rem;
+}
+
+
