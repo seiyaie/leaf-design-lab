@@ -19,12 +19,12 @@ html {
 body {
     line-height: 1.7;
     letter-spacing: 0.05em;
-    font-size: 16rem;
+    font-size: 16px;
     background-color: var(--bg-base);
     color: var(--font-white);
     font-family: var(--font-family-jp);
 
     @include g.mq() {
-        font-size: 18rem;
+        font-size: 18px;
     }
 }

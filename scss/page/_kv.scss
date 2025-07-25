@@ -6,10 +6,10 @@ page > kv
 */
 
 .kv {
-    margin-top: 64rem;
-    height: calc(100vh - 64rem);
-    padding: 16rem;
-    border-bottom: 1rem solid var(--border-white);
+    margin-top: 64px;
+    height: calc(100vh - 64px);
+    padding: 16px;
+    border-bottom: 1px solid var(--border-white);
     position: relative;
 }
 
@@ -17,9 +17,9 @@ page > kv
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 32rem;
+    top: 32px;
     @include g.mq() {
-        top: 106rem;
+        top: 106px;
     }
 }
 

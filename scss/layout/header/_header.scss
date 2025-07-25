@@ -9,18 +9,18 @@ layout > header > header
     top: 0;
     right: 0;
     width: 100%;
-    height: 64rem;
+    height: 64px;
     background-color: var(--bg-base);
     color: var(--font-white);
     z-index: var(--z-index-header);
-    border-bottom: 1rem solid var(--border-white);
+    border-bottom: 1px solid var(--border-white);
     font-family: var(--font-family-en);
     @include g.mq() {
-        height: 108rem;
+        height: 108px;
     }
     &.is-fixed {
         position: fixed;
-        top: -64rem;
+        top: -64px;
         right: 0;
         width: 100%;
     }
@@ -29,7 +29,7 @@ layout > header > header
 .header-inner {
     width: 90%;
     height: 100%;
-    // max-width: 1300rem;
+    // max-width: 1300px;
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
@@ -72,7 +72,7 @@ layout > header > header
 
 @media screen and (min-width: 768px) {
     .header-item {
-        width: 160rem;
+        width: 160px;
     }
 }
 
@@ -105,24 +105,24 @@ layout > header > header
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
-    width: 20rem;
-    height: 20rem;
+    gap: 10px;
+    width: 20px;
+    height: 20px;
     @include g.mq() {
         display: none;
     }
 }
 
 .header-hamburger-button-line {
-    width: 20rem;
-    height: 14rem;
+    width: 20px;
+    height: 14px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     span {
-        width: 20rem;
-        height: 1rem;
+        width: 20px;
+        height: 1px;
         background-color: var(--bg-white);
     }
 }
@@ -180,21 +180,19 @@ layout > header > header
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 24rem;
+    padding: 24px;
     span {
-        width: 20rem;
-        height: 2rem;
+        width: 20px;
+        height: 2px;
         background-color: var(--bg-black);
 
         &:nth-child(1) {
-            // transform: scale(1.2) translateY(6rem) rotate(-36deg);
             rotate: 45deg;
-            transform: translateY(1rem) translateX(1rem);
+            transform: translateY(1px) translateX(1px);
         }
         &:nth-child(2) {
-            // transform: scale(1.2) translateY(-6rem) rotate(36deg);
             rotate: -45deg;
-            transform: translateY(-1rem);
+            transform: translateY(-1px);
         }
     }
     @include g.mq() {
