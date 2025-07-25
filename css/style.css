@@ -250,14 +250,14 @@ html {
 body {
   line-height: 1.7;
   letter-spacing: 0.05em;
-  font-size: 16rem;
+  font-size: 16px;
   background-color: var(--bg-base);
   color: var(--font-white);
   font-family: var(--font-family-jp);
 }
 @media screen and (min-width: 768px) {
   body {
-    font-size: 18rem;
+    font-size: 18px;
   }
 }
 
@@ -267,11 +267,11 @@ component > title
 */
 .section-title {
   font-weight: bold;
-  font-size: 24rem;
+  font-size: 24px;
   font-family: var(--font-family-en);
 }
 .section-title--center {
-  font-size: 32rem;
+  font-size: 32px;
   text-align: center;
 }
 
@@ -297,8 +297,8 @@ layout > section
 ------------------------------
 */
 .l-section {
-  padding: 120rem 0;
-  margin-top: 64rem;
+  padding: 120px 0;
+  margin-top: 64px;
 }
 
 /*!
@@ -310,22 +310,20 @@ layout > header > header
   top: 0;
   right: 0;
   width: 100%;
-  height: 64rem;
+  height: 64px;
   background-color: var(--bg-base);
   color: var(--font-white);
   z-index: var(--z-index-header);
-  border-bottom: 1rem solid var(--border-white);
+  border-bottom: 1px solid var(--border-white);
   font-family: var(--font-family-en);
 }
 @media screen and (min-width: 768px) {
   .header {
-    height: 108rem;
+    height: 108px;
   }
 }
 .header.is-fixed {
   position: fixed;
-  top: -64rem;
-  right: 0;
   width: 100%;
 }
 
@@ -373,7 +371,7 @@ layout > header > header
 
 @media screen and (min-width: 768px) {
   .header-item {
-    width: 160rem;
+    width: 160px;
   }
 }
 .header-link {
@@ -406,9 +404,9 @@ layout > header > header
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
-  width: 20rem;
-  height: 20rem;
+  gap: 10px;
+  width: 20px;
+  height: 20px;
 }
 @media screen and (min-width: 768px) {
   .header-hamburger-button {
@@ -417,15 +415,15 @@ layout > header > header
 }
 
 .header-hamburger-button-line {
-  width: 20rem;
-  height: 14rem;
+  width: 20px;
+  height: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .header-hamburger-button-line span {
-  width: 20rem;
-  height: 1rem;
+  width: 20px;
+  height: 1px;
   background-color: var(--bg-white);
 }
 
@@ -482,20 +480,20 @@ layout > header > header
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 24rem;
+  padding: 24px;
 }
 .hamburger-close-button span {
-  width: 20rem;
-  height: 2rem;
+  width: 20px;
+  height: 2px;
   background-color: var(--bg-black);
 }
 .hamburger-close-button span:nth-child(1) {
   rotate: 45deg;
-  transform: translateY(1rem) translateX(1rem);
+  transform: translateY(1px) translateX(1px);
 }
 .hamburger-close-button span:nth-child(2) {
   rotate: -45deg;
-  transform: translateY(-1rem);
+  transform: translateY(-1px);
 }
 @media screen and (min-width: 768px) {
   .hamburger-close-button {
@@ -512,10 +510,10 @@ layout > header > dropdown-menu
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
-  gap: 8rem;
+  gap: 8px;
   height: 100%;
   width: 100%;
-  padding: 16rem;
+  padding: 16px;
 }
 @media (any-hover: hover) {
   .dropdown-button:hover {
@@ -527,10 +525,10 @@ layout > header > dropdown-menu
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8rem;
+    gap: 8px;
     height: 100%;
     width: 100%;
-    padding: 16rem;
+    padding: 16px;
   }
 }
 @media screen and (min-width: 768px) and (any-hover: hover) {
@@ -541,18 +539,18 @@ layout > header > dropdown-menu
 
 .dropdown-button--arrow {
   display: block;
-  width: 10rem;
-  height: 10rem;
-  border-left: 2rem solid black;
-  border-bottom: 2rem solid black;
-  transform: rotate(-45deg) translateY(-5rem);
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(-45deg) translateY(-5px);
 }
 @media screen and (min-width: 768px) {
   .dropdown-button--arrow {
-    width: 12rem;
-    height: 12rem;
-    border-left: 4rem solid var(--border-white);
-    border-bottom: 4rem solid var(--border-white);
+    width: 12px;
+    height: 12px;
+    border-left: 4px solid var(--border-white);
+    border-bottom: 4px solid var(--border-white);
   }
 }
 
@@ -561,18 +559,18 @@ layout > header > dropdown-menu
 }
 .dropdown-submenu.is-active {
   display: flex;
-  padding: 16rem;
+  padding: 16px;
 }
 @media screen and (min-width: 768px) {
   .dropdown-submenu {
     display: none;
     background-color: #222;
     position: absolute;
-    padding: 16rem;
+    padding: 16px;
     flex-direction: column;
     gap: 8px;
     overflow: hidden;
-    border: 1rem solid var(--border-white);
+    border: 1px solid var(--border-white);
   }
 }
 
@@ -591,9 +589,9 @@ layout > header > dropdown-menu
 }
 
 .dropdown-item {
-  border-bottom: 1rem dotted white;
-  border-top: 1rem dotted white;
-  padding: 8rem;
+  border-bottom: 1px dotted white;
+  border-top: 1px dotted white;
+  padding: 8px;
 }
 
 .dropdown-item:hover {
@@ -610,11 +608,11 @@ layout > header
 ------------------------------
 */
 .footer {
-  padding: 64rem;
+  padding: 64px;
   background-color: var(--bg-base);
-  margin-top: 64rem;
+  margin-top: 64px;
   color: var(--font-white);
-  border-top: 1rem solid var(--border-white);
+  border-top: 1px solid var(--border-white);
 }
 
 .footer-inner {
@@ -635,32 +633,32 @@ layout > header
 }
 
 .footer-list {
-  margin-top: 32rem;
+  margin-top: 32px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 8rem 16rem;
-  font-size: 14rem;
+  gap: 8px 16px;
+  font-size: 14px;
   font-family: var(--font-family-en);
 }
 @media screen and (min-width: 768px) {
   .footer-list {
     flex-wrap: nowrap;
-    font-size: 16rem;
+    font-size: 16px;
   }
 }
 
 .footer-copy {
   display: block;
   text-align: center;
-  font-size: 12rem;
-  margin-top: 32rem;
+  font-size: 12px;
+  margin-top: 32px;
 }
 @media screen and (min-width: 768px) {
   .footer-copy {
-    font-size: 14rem;
-    margin-top: 40rem;
+    font-size: 14px;
+    margin-top: 40px;
   }
 }
 
@@ -669,10 +667,10 @@ page > kv
 ------------------------------
 */
 .kv {
-  margin-top: 64rem;
-  height: calc(100vh - 64rem);
-  padding: 16rem;
-  border-bottom: 1rem solid var(--border-white);
+  margin-top: 64px;
+  height: calc(100vh - 64px);
+  padding: 16px;
+  border-bottom: 1px solid var(--border-white);
   position: relative;
 }
 
@@ -680,12 +678,7 @@ page > kv
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 32rem;
-}
-@media screen and (min-width: 768px) {
-  .kv-title {
-    top: 106rem;
-  }
+  top: 60px;
 }
 
 .kv-slider,
@@ -717,18 +710,18 @@ page > accordion
 ------------------------------
 */
 .accordion {
-  border: 1rem solid var(--border-white);
+  border: 1px solid var(--border-white);
 }
 
 .accordion-inner {
   display: grid;
-  gap: 24rem;
-  margin-top: 32rem;
+  gap: 24px;
+  margin-top: 32px;
 }
 
 .accordion-details {
   width: 90%;
-  max-width: 600rem;
+  max-width: 600px;
   margin-inline: auto;
   background-color: var(--accordion-bg);
 }
@@ -741,15 +734,15 @@ page > accordion
           user-select: none;
   background-color: var(--bg-black);
   color: var(--font-white);
-  border: 1rem solid var(--border-white);
+  border: 1px solid var(--border-white);
   padding: 0.5em;
   font-weight: bold;
   position: relative;
-  font-size: 14rem;
+  font-size: 14px;
 }
 @media screen and (min-width: 768px) {
   .accordion-summary {
-    font-size: 18rem;
+    font-size: 18px;
   }
 }
 
@@ -767,29 +760,29 @@ page > accordion
 }
 
 .accordion-summary::before {
-  width: 14rem;
-  height: 2rem;
-  right: 8rem;
+  width: 14px;
+  height: 2px;
+  right: 8px;
 }
 @media screen and (min-width: 768px) {
   .accordion-summary::before {
-    width: 16rem;
-    height: 2rem;
-    right: 9rem;
+    width: 16px;
+    height: 2px;
+    right: 9px;
   }
 }
 
 .accordion-summary::after {
-  width: 2rem;
-  height: 14rem;
-  right: 14rem;
+  width: 2px;
+  height: 14px;
+  right: 14px;
   transition: rotate 0.3s;
 }
 @media screen and (min-width: 768px) {
   .accordion-summary::after {
-    width: 2rem;
-    height: 16rem;
-    right: 16rem;
+    width: 2px;
+    height: 16px;
+    right: 16px;
   }
 }
 
@@ -803,7 +796,7 @@ page > accordion
 
 .accordion-answer {
   color: var(--font-black);
-  padding: 8rem;
+  padding: 8px;
 }
 
 /*!
@@ -811,7 +804,7 @@ page > tab-menu
 ------------------------------
 */
 .tab-menu {
-  border: 1rem solid var(--border-white);
+  border: 1px solid var(--border-white);
 }
 
 .tab-menu-inner {
@@ -821,22 +814,22 @@ page > tab-menu
 
 .tab-menu-list {
   display: flex;
-  margin-top: 32rem;
+  margin-top: 32px;
 }
 
 .tab-menu-item {
   font-weight: bold;
-  font-size: 12rem;
+  font-size: 12px;
   flex: 1;
   display: block;
   text-align: center;
   width: 100%;
-  height: 40rem;
+  height: 40px;
   transition: opacity 0.4s;
 }
 @media screen and (min-width: 768px) {
   .tab-menu-item {
-    font-size: 18rem;
+    font-size: 18px;
   }
 }
 
@@ -857,13 +850,13 @@ page > tab-menu
 }
 
 .tab-menu-content {
-  font-size: 12rem;
+  font-size: 12px;
   display: none;
   padding: 20px;
 }
 @media screen and (min-width: 768px) {
   .tab-menu-content {
-    font-size: 16rem;
+    font-size: 16px;
   }
 }
 .tab-menu-content.is-active {
@@ -900,9 +893,9 @@ page > modal
 
 .modal-contents {
   background-color: var(--bg-white);
-  padding: 60rem;
+  padding: 60px;
   width: 90%;
-  max-width: 800rem;
+  max-width: 800px;
   position: relative;
 }
 
@@ -910,8 +903,8 @@ page > modal
   position: absolute;
   right: 6px;
   top: 6px;
-  width: 40rem;
-  height: 40rem;
+  width: 40px;
+  height: 40px;
 }
 
 .modal-close-button::before,
@@ -938,11 +931,11 @@ page > modal
 }
 
 .modal-text {
-  font-size: 16rem;
+  font-size: 16px;
 }
 @media screen and (min-width: 768px) {
   .modal-text {
-    font-size: 24rem;
+    font-size: 24px;
   }
 }
 
@@ -962,13 +955,13 @@ page > modal
 .modal-open-button {
   display: inline-block;
   font-weight: bold;
-  font-size: 24rem;
+  font-size: 24px;
   text-align: center;
-  width: 320rem;
+  width: 320px;
   background-color: var(--bg-black);
   color: var(--font-white);
   border: 1px solid var(--border-white);
-  border-radius: 12rem;
-  padding: 16rem;
-  margin-top: 32rem;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 32px;
 }/*# sourceMappingURL=style.css.map */

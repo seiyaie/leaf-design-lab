@@ -4,17 +4,19 @@ export const initIntersectionObserver = () => {
     const kv = document.querySelector(".js-kv");
     const header = document.querySelector(".js-header");
 
+    // Opening Keyframe
     const slideDownKeyframes = {
-        transform: "translateY(60rem)",
+        transform: ["translateY(-100%)", "translateY(0)"],
     };
+
+    // Closing Keyframe
     const slideUpKeyframes = {
-        transform: "translateY(0)",
+        transform: ["translateY(0)", "translateY(-100%)"],
     };
 
     const animationOptions = {
         duration: 100,
         easing: "linear",
-        fill: "forwards",
     };
 
     // kvまたは、headerが存在しない場合は処理を終了

@@ -17,10 +17,7 @@ page > kv
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 32px;
-    @include g.mq() {
-        top: 106px;
-    }
+    top: 60px;
 }
 
 .kv-slider,

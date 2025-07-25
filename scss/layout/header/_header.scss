@@ -20,8 +20,6 @@ layout > header > header
     }
     &.is-fixed {
         position: fixed;
-        top: -64px;
-        right: 0;
         width: 100%;
     }
 }
@@ -94,7 +92,7 @@ layout > header > header
         padding: 0;
         @media (any-hover: hover) {
             &:hover {
-                background-color:var(--hover-secondary);
+                background-color: var(--hover-secondary);
             }
         }
     }
