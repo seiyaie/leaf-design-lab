@@ -69,6 +69,7 @@ page > modal
 
 .modal-text {
     font-size: 16px;
+
     @include g.mq() {
         font-size: 24px;
     }
