@@ -9,7 +9,7 @@ export const initDropdownMenu = () => {
         btn.addEventListener("click", () => {
             const submenu = btn.nextElementSibling;
             const arrow = btn.querySelector('.js-dropdown-button--arrow');
-            const isOpen = submenu.classList.contains("active");
+            const isOpen = submenu.classList.contains("is-active");
 
             if (!isOpen) {
                 closeAllSubMenus();

@@ -34,7 +34,7 @@ export const openSubMenu = (submenu, arrow) => {
         }
     );
 
-    submenu.classList.add("active");
+    submenu.classList.add("is-active");
     rotateArrow(arrow, true);
 };
 
@@ -53,14 +53,14 @@ export const closeSubMenu = (submenu, arrow) => {
 
     animation.onfinish = () => {
         submenu.style.display = "none";
-        submenu.classList.remove("active");
+        submenu.classList.remove("is-active");
     };
     rotateArrow(arrow, false);
 };
 
 // すべてのsubmenuを閉じる
 export const closeAllSubMenus = (context = document) => {
-    context.querySelectorAll(".dropdown-submenu.active").forEach((submenu) => {
+    context.querySelectorAll(".dropdown-submenu.is-active").forEach((submenu) => {
         const parentBtn = submenu.previousElementSibling;
         const arrow = parentBtn.querySelector(".js-dropdown-button--arrow");
         closeSubMenu(submenu, arrow);
@@ -68,8 +68,8 @@ export const closeAllSubMenus = (context = document) => {
 };
 
 export const closeAllSubMenusImmediately = (context = document) => {
-    context.querySelectorAll(".dropdown-submenu.active").forEach((submenu) => {
+    context.querySelectorAll(".dropdown-submenu.is-active").forEach((submenu) => {
         submenu.style.display = "none";
-        submenu.classList.remove("active");
+        submenu.classList.remove("is-active");
     });
 };

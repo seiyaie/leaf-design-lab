@@ -56,7 +56,6 @@ layout > header > dropdown-menu
     display: none;
     &.is-active {
         display: flex;
-        padding: 16px;
     }
     @include g.mq() {
         display: none;
@@ -80,9 +79,9 @@ layout > header > dropdown-menu
     }
 }
 
-.dropdown-submenu.active {
-    display: flex;
-}
+// .dropdown-submenu.active {
+//     display: flex;
+// }
 
 .dropdown-item {
     border-bottom: 1px dotted white;
