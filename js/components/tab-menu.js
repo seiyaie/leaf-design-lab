@@ -4,7 +4,7 @@ export const initTabMenu = () => {
 
     const openingKeyframes = {
         opacity: [0, 1],
-        transform: ["translateY(20rem)", "translateY(0)"],
+        transform: ["translateY(20px)", "translateY(0)"],
     };
 
     const options = {
