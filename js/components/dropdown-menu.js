@@ -2,19 +2,20 @@ import { openSubMenu, closeSubMenu, closeAllSubMenus } from "../utility/function
 
 export const initDropdownMenu = () => {
     const btns = document.querySelectorAll(".js-dropdown-button");
-    // const headerList = document.querySelector(".js-header-list");
+
 
     // メイン処理
     btns.forEach((btn) => {
         btn.addEventListener("click", () => {
             const submenu = btn.nextElementSibling;
+            const arrow = btn.querySelector('.js-dropdown-button--arrow');
             const isOpen = submenu.classList.contains("active");
 
             if (!isOpen) {
                 closeAllSubMenus();
-                openSubMenu(submenu);
+                openSubMenu(submenu, arrow);
             } else {
-                closeSubMenu(submenu);
+                closeSubMenu(submenu, arrow);
             }
         });
     });

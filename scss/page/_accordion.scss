@@ -6,7 +6,8 @@ page > accordion
 */
 
 .accordion {
-  border: 1px solid var(--border-white);
+  border: 2px solid var(--border-white);
+  border-radius: 16px;
 }
 
 .accordion-inner {

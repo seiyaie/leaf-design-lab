@@ -1,5 +1,27 @@
+const rotateArrow = (arrow, isOpening) => {
+    if (!arrow) return;
+
+    arrow.animate(
+        [
+            {
+                transform: `rotate(${isOpening ? "45deg" : "585deg"})`,
+                top: isOpening ? "40%" : "45%",
+            },
+            {
+                transform: `rotate(${isOpening ? "585deg" : "45deg"})`,
+                top: isOpening ? "45%" : "40%",
+            },
+        ],
+        {
+            duration: 300,
+            easing: "ease",
+            fill: "forwards",
+        }
+    );
+};
+
 // submenuを開く
-export const openSubMenu = (submenu) => {
+export const openSubMenu = (submenu, arrow) => {
     submenu.style.display = "block";
     const height = submenu.scrollHeight;
 
@@ -13,10 +35,11 @@ export const openSubMenu = (submenu) => {
     );
 
     submenu.classList.add("active");
+    rotateArrow(arrow, true);
 };
 
 // submenuを閉じる
-export const closeSubMenu = (submenu) => {
+export const closeSubMenu = (submenu, arrow) => {
     const height = submenu.scrollHeight;
 
     const animation = submenu.animate(
@@ -32,12 +55,15 @@ export const closeSubMenu = (submenu) => {
         submenu.style.display = "none";
         submenu.classList.remove("active");
     };
+    rotateArrow(arrow, false);
 };
 
 // すべてのsubmenuを閉じる
 export const closeAllSubMenus = (context = document) => {
     context.querySelectorAll(".dropdown-submenu.active").forEach((submenu) => {
-        closeSubMenu(submenu);
+        const parentBtn = submenu.previousElementSibling;
+        const arrow = parentBtn.querySelector(".js-dropdown-button--arrow");
+        closeSubMenu(submenu, arrow);
     });
 };
 
@@ -47,4 +73,3 @@ export const closeAllSubMenusImmediately = (context = document) => {
         submenu.classList.remove("active");
     });
 };
-

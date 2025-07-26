@@ -10,6 +10,8 @@ page > kv
     height: clamp(500px, calc(100svh - 64px), 1000px);
     border-bottom: 1px solid var(--border-white);
     position: relative;
+    width: 100%;
+    overflow: hidden;
     @include g.mq() {
         margin-top: 108px;
         height: clamp(500px, calc(100svh - 108px), 1000px);
@@ -21,7 +23,7 @@ page > kv
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    right: 0;
+    right: 0;;
     padding-inline: 16px;
 }
 
@@ -31,4 +33,5 @@ page > kv
 
 .kv-item {
     border: 1px solid var(--border-white);
+    border-radius: 8px;
 }

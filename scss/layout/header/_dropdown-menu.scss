@@ -6,27 +6,22 @@ layout > header > dropdown-menu
 */
 
 .dropdown-button {
-    display: flex;
+    position: relative;
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
     flex-shrink: 0;
-    gap: 8px;
     height: 100%;
     width: 100%;
-    padding: 16px;
+    padding: 16px 32px;
     @media (any-hover: hover) {
         &:hover {
             background-color: var(--hover-base);
         }
     }
     @include g.mq() {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8px;
         height: 100%;
         width: 100%;
-        padding: 16px;
         @media (any-hover: hover) {
             &:hover {
                 background-color: var(--hover-secondary);
@@ -36,17 +31,24 @@ layout > header > dropdown-menu
 }
 
 .dropdown-button--arrow {
-    display: block;
+    position: absolute;
+    display: inline-block;
+    top: 40%;
+    right: 32px;
     width: 10px;
     height: 10px;
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-    transform: rotate(-45deg) translateY(-5px);
+    border: 2px solid transparent;
+    border-bottom-color: var(--border-black);
+    border-right-color: var(--border-black);
+    transform: rotate(45deg);
+    transition: all 0.3s;
     @include g.mq() {
+        right: 16px;
         width: 12px;
         height: 12px;
-        border-left: 4px solid var(--border-white);
-        border-bottom: 4px solid var(--border-white);
+        border: 3px solid transparent;
+        border-bottom-color: var(--border-white);
+        border-right-color: var(--border-white);
     }
 }
 

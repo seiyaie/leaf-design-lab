@@ -6,7 +6,8 @@ page > tab-menu
 */
 
 .tab-menu {
-    border: 1px solid var(--border-white);
+    border: 2px solid var(--border-white);
+    border-radius: 16px;
 }
 
 .tab-menu-inner {
