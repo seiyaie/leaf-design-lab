@@ -235,19 +235,6 @@ svg {
 foundation > base
 ------------------------------
 */
-:root {
-  --base-vw: 380;
-}
-@media screen and (min-width: 768px) {
-  :root {
-    --base-vw: 1440;
-  }
-}
-
-html {
-  font-size: calc(100vw / var(--base-vw));
-}
-
 body {
   line-height: 1.7;
   letter-spacing: 0.05em;

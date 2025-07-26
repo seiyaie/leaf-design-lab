@@ -6,7 +6,6 @@ import { initDropdownMenu } from "./components/dropdown-menu.js";
 import { initHamburgerMenu } from "./components/hamburger-menu.js";
 import { initModal } from "./components/modal.js";
 
-
 document.addEventListener("DOMContentLoaded", () => {
     initSplide();
     initIntersectionObserver();
@@ -16,5 +15,3 @@ document.addEventListener("DOMContentLoaded", () => {
     initHamburgerMenu();
     initModal();
 });
-
-

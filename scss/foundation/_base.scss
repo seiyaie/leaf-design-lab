@@ -4,17 +4,6 @@
 foundation > base
 ------------------------------
 */
-:root {
-    --base-vw: 380;
-
-    @include g.mq() {
-        --base-vw: 1440;
-    }
-}
-
-html {
-    font-size: calc(100vw / var(--base-vw));
-}
 
 body {
     line-height: 1.7;

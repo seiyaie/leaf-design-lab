@@ -157,6 +157,7 @@ layout > header > header
     color: var(--font-black);
     font-weight: bold;
     font-size: 20px;
+
     @include g.mq() {
         display: inline-block;
         width: auto;
@@ -171,6 +172,7 @@ layout > header > header
         color: var(--font-white);
         font-size: 16px;
     }
+
     @include g.mq(lg) {
         font-size: 18px;
     }
@@ -188,6 +190,7 @@ layout > header > header
     width: 100%;
     height: 100%;
     padding: 24px;
+
     span {
         width: 20px;
         height: 2px;
@@ -202,9 +205,11 @@ layout > header > header
             transform: translateY(-1px);
         }
     }
+
     @include g.mq() {
         display: none;
     }
+
     @media (any-hover: hover) {
         &:hover {
             background-color: var(--hover-base);

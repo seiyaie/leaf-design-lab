@@ -6,52 +6,53 @@ layout > header
 */
 
 .footer {
-  padding: 64px;
-  background-color: var(--bg-base);
-  margin-top: 64px;
-  color: var(--font-white);
-  border-top: 1px solid var(--border-white);
+    padding: 64px;
+    background-color: var(--bg-base);
+    margin-top: 64px;
+    color: var(--font-white);
+    border-top: 1px solid var(--border-white);
 }
 
 .footer-inner {
-  width: 90%;
-  margin-inline: auto;
+    width: 90%;
+    margin-inline: auto;
 }
 
 .footer-logo {
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  padding-left: 0.05em;
-  @include g.mq() {
-      padding-left: 0;
-  }
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 0.05em;
+
+    @include g.mq() {
+        padding-left: 0;
+    }
 }
 
-
 .footer-list {
-  margin-top: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8px 16px;
-  font-size: 14px;
-  font-family: var(--font-family-en);
-  @include g.mq() {
-    flex-wrap: nowrap;
-      font-size: 16px;
-  }
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 16px;
+    font-size: 14px;
+    font-family: var(--font-family-en);
+
+    @include g.mq() {
+        flex-wrap: nowrap;
+        font-size: 16px;
+    }
 }
 
 .footer-copy {
-  display: block;
-  text-align: center;
-  font-size: 12px;
-  margin-top: 32px;
-  @include g.mq() {
-    font-size: 14px;
-    margin-top: 40px;
-  }
-}
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 32px;
 
+    @include g.mq() {
+        font-size: 14px;
+        margin-top: 40px;
+    }
+}
