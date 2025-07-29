@@ -41,7 +41,7 @@ layout > header > dropdown-menu
     border-bottom-color: var(--border-black);
     border-right-color: var(--border-black);
     transform: rotate(45deg);
-    transition: all 0.3s;
+    // transition: all 0.3s;
     @include g.mq() {
         right: 16px;
         width: 12px;
