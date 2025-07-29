@@ -19,4 +19,12 @@ export const initDropdownMenu = () => {
             }
         });
     });
+
+    // submenu外クリックで閉じる処理
+    document.addEventListener("click", (e) => {
+        const isInsideDropdown = e.target.closest(".js-dropdown-button") || e.target.closest(".js-dropdown-submenu");
+        if (!isInsideDropdown) {
+            closeAllSubMenus();
+        }
+    });
 };

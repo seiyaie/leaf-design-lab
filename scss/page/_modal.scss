@@ -44,6 +44,14 @@ page > modal
     top: 6px;
     width: 40px;
     height: 40px;
+    @media (any-hover: hover) {
+        &:hover {
+            &::after,
+            &::before {
+                scale: 1.1;
+            }
+        }
+    }
 }
 .modal-close-button::before,
 .modal-close-button::after {
@@ -58,6 +66,10 @@ page > modal
     right: 0;
     bottom: 0;
     margin: auto;
+    transition: scale 0.1s;
+    @include g.mq() {
+        width: 20px;
+    }
 }
 .modal-close-button::before {
     transform: rotate(45deg);
