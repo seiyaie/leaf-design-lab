@@ -41,7 +41,7 @@ layout > header > dropdown-menu
     border-bottom-color: var(--border-black);
     border-right-color: var(--border-black);
     transform: rotate(45deg);
-    // transition: all 0.3s;
+    transition: all 0.3s;
     @include g.mq() {
         right: 16px;
         width: 12px;
@@ -49,6 +49,10 @@ layout > header > dropdown-menu
         border: 3px solid transparent;
         border-bottom-color: var(--border-white);
         border-right-color: var(--border-white);
+    }
+    &.is-open {
+            transform: rotate(585deg);
+            top: 45%;
     }
 }
 

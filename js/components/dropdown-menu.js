@@ -1,4 +1,4 @@
-import { openSubMenu, closeSubMenu, closeAllSubMenus } from "../utility/functions.js";
+import { openSubMenu, closeSubMenu, closeAllSubMenus, closeSubmenusIfOpen } from "../utility/functions.js";
 
 export const initDropdownMenu = () => {
     const btns = document.querySelectorAll(".js-dropdown-button");
@@ -25,5 +25,18 @@ export const initDropdownMenu = () => {
         if (!isInsideDropdown) {
             closeAllSubMenus();
         }
+    });
+
+    let previousWidth = window.innerWidth;
+
+    window.addEventListener("resize", () => {
+        const currentWidth = window.innerWidth;
+
+        if (previousWidth >= 768 && currentWidth < 768) {
+            // 768px以上 → 未満 に変化したときだけ閉じる
+            closeSubmenusIfOpen();
+        }
+
+        previousWidth = currentWidth;
     });
 };

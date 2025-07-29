@@ -1,4 +1,4 @@
-import { closeAllSubMenus } from "../utility/functions.js";
+import { closeSubmenusIfOpen } from "../utility/functions.js";
 
 export const initHamburgerMenu = () => {
     const menu = document.querySelector(".js-header-menu");
@@ -47,21 +47,26 @@ export const initHamburgerMenu = () => {
 
     // メニューopenする関数
     const openMenu = () => {
-        closeAllSubMenus();
         disableScroll();
         menu.showModal();
         menu.animate(contentsOpeningKeyframes, contentsOpeningOptions);
     };
     // メニューcloseする関数
-    const closeMenu = () => {
-        closeAllSubMenus();
-        const closingAnim = menu.animate(contentsClosingKeyframes, contentsClosingOptions);
+    const closeMenu = (animate = true) => {
+        if (animate) {
+            const closingAnim = menu.animate(contentsClosingKeyframes, contentsClosingOptions);
 
-        // アニメーションの完了後
-        closingAnim.onfinish = () => {
+            // アニメーションの完了後
+            closingAnim.onfinish = () => {
+                menu.close();
+                closeSubmenusIfOpen();
+                enableScroll();
+            };
+        } else {
             menu.close();
+            closeSubmenusIfOpen();
             enableScroll();
-        };
+        }
     };
 
     button.addEventListener("click", () => {
@@ -74,8 +79,7 @@ export const initHamburgerMenu = () => {
 
     window.addEventListener("resize", () => {
         if (menu && window.innerWidth >= 768 && menu.open) {
-            menu.close();
-            document.body.style.overflow = "";
+            closeMenu(false);
         }
     });
 

@@ -554,6 +554,7 @@ layout > header > dropdown-menu
   border-bottom-color: var(--border-black);
   border-right-color: var(--border-black);
   transform: rotate(45deg);
+  transition: all 0.3s;
 }
 @media screen and (min-width: 768px) {
   .dropdown-button--arrow {
@@ -564,6 +565,10 @@ layout > header > dropdown-menu
     border-bottom-color: var(--border-white);
     border-right-color: var(--border-white);
   }
+}
+.dropdown-button--arrow.is-open {
+  transform: rotate(585deg);
+  top: 45%;
 }
 
 .dropdown-submenu {

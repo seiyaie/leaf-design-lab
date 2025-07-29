@@ -1,4 +1,4 @@
-import { closeAllSubMenusImmediately } from "../utility/functions.js";
+import { closeSubmenusIfOpen } from "../utility/functions.js";
 
 export const initIntersectionObserver = () => {
     const kv = document.querySelector(".js-kv");
@@ -26,7 +26,7 @@ export const initIntersectionObserver = () => {
         entries.forEach((entry) => {
             // kv がvp内に入り、かつheaderがfixedを保有している場合
             if (entry.isIntersecting && header.classList.contains("is-fixed")) {
-                closeAllSubMenusImmediately();
+                closeSubmenusIfOpen();
                 //header閉じるアニメーション開始
                 const closeAnimation = header.animate(slideUpKeyframes, animationOptions);
                 //アニメーション終了後にfixed削除
@@ -39,7 +39,7 @@ export const initIntersectionObserver = () => {
                 header.classList.add("is-fixed");
                 //ヘッダー表示アニメーション開始
                 header.animate(slideDownKeyframes, animationOptions);
-                closeAllSubMenusImmediately();
+                closeSubmenusIfOpen();
             }
         });
     };
