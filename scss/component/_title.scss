@@ -9,9 +9,10 @@ component > title
     font-weight: bold;
     font-size: 24px;
     font-family: var(--font-family-en);
-
-    &--center {
+    @include g.mq() {
         font-size: 32px;
+    }
+    &--center {
         text-align: center;
     }
 }

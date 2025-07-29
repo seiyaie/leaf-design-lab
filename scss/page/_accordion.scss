@@ -79,7 +79,7 @@ page > accordion
 }
 
 .accordion-details[open] .accordion-summary::after {
-    rotate: 90deg;
+    rotate: 270deg;
 }
 
 .accordion-content-box {
