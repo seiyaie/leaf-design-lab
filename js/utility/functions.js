@@ -1,6 +1,6 @@
 const rotateArrow = (arrow, isOpening, animate = true) => {
     if (!arrow) return;
-    arrow.getAnimations().forEach(anim => anim.cancel());
+    arrow.getAnimations().forEach((anim) => anim.cancel());
     if (!animate) {
         arrow.style.transform = `rotate(${isOpening ? "585deg" : "45deg"})`;
         arrow.style.top = isOpening ? "45%" : "40%";
@@ -79,6 +79,6 @@ export const closeAllSubMenusImmediately = (context = document) => {
         const arrow = parentBtn.querySelector(".js-dropdown-button--arrow");
         submenu.style.display = "none";
         submenu.classList.remove("is-active");
-        rotateArrow(arrow, false, false)
+        rotateArrow(arrow, false, false);
     });
 };

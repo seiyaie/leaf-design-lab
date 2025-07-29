@@ -1,4 +1,3 @@
-
 export const initAccordion = () => {
     // query selectors
     const details = document.querySelectorAll(".js-accordion-details");
@@ -11,7 +10,6 @@ export const initAccordion = () => {
 
         if (!summary || !content) return;
 
-
         summary.addEventListener("click", (e) => {
             e.preventDefault();
 
@@ -23,37 +21,37 @@ export const initAccordion = () => {
             const currentHeight = content.scrollHeight + "px";
 
             // openingKeyframes
-        const openingKeyframes = {
-          height: [0, currentHeight],
-          opacity: [0, 1],
-      };
+            const openingKeyframes = {
+                height: [0, currentHeight],
+                opacity: [0, 1],
+            };
 
-      const closingKeyframes = {
-          height: [currentHeight, 0],
-          opacity: [1, 0],
-      };
+            const closingKeyframes = {
+                height: [currentHeight, 0],
+                opacity: [1, 0],
+            };
 
-      const options = {
-          duration: 300,
-          easing: "linear",
-          fill: "forwards",
-      };
+            const options = {
+                duration: 300,
+                easing: "linear",
+                fill: "forwards",
+            };
 
             if (el.open) {
-              el.dataset.isAnimation = "true";
-              const closeAnimation = content.animate(closingKeyframes, options);
-              closeAnimation.onfinish = () => {
-                el.removeAttribute('open');
-                el.dataset.isAnimation = "false";
-              };
+                el.dataset.isAnimation = "true";
+                const closeAnimation = content.animate(closingKeyframes, options);
+                closeAnimation.onfinish = () => {
+                    el.removeAttribute("open");
+                    el.dataset.isAnimation = "false";
+                };
             } else {
-              el.setAttribute("open", "")
-              el.dataset.isAnimation = "true";
+                el.setAttribute("open", "");
+                el.dataset.isAnimation = "true";
 
-              const openAnimation = content.animate(openingKeyframes, options);
-              openAnimation.onfinish = () => {
-                el.dataset.isAnimation = "false";
-              };
+                const openAnimation = content.animate(openingKeyframes, options);
+                openAnimation.onfinish = () => {
+                    el.dataset.isAnimation = "false";
+                };
             }
         });
     });

@@ -15,7 +15,6 @@ export const initTabMenu = () => {
 
     for (let i = 0; i < menuItems.length; i++) {
         menuItems[i].addEventListener("click", () => {
-
             menuItems.forEach((item) => {
                 item.classList.remove("is-active");
             });
