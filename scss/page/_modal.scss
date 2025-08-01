@@ -16,6 +16,7 @@ page > modal
     height: 100%;
     background-color: transparent;
     border: none;
+    padding: 16px;
 }
 
 .modal-window::backdrop {
@@ -32,18 +33,27 @@ page > modal
 
 .modal-contents {
     background-color: var(--bg-white);
-    padding: 60px;
-    width: 90%;
+    padding: 40px;
+    width: 95%;
     max-width: 800px;
     position: relative;
+    overflow-y: auto;
+    max-height: 80vh;
+    @include g.mq() {
+        padding: 60px;
+    }
 }
 
 .modal-close-button {
     position: absolute;
     right: 6px;
     top: 6px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    @include g.mq() {
+        height: 40px;
+        width: 40px;
+    }
     @media (any-hover: hover) {
         &:hover {
             &::after,
@@ -80,10 +90,14 @@ page > modal
 }
 
 .modal-text {
-    font-size: 16px;
+    font-size: 12px;
+
+    @include g.mq(sm) {
+        font-size: 14px;
+    }
 
     @include g.mq() {
-        font-size: 24px;
+        font-size: 16px;
     }
 }
 
