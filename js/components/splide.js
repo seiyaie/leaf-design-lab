@@ -15,8 +15,8 @@ export const initSplide = () => {
         breakpoints: {
             1200: { gap: "48px" },
             1024: { gap: "40px" },
-            768: { perPage: 2, gap: "32px" },
-            480: { perPage: 1, gap: "24px" },
+            768: { perPage: 2, gap: "32px", fixedWidth: "280px", fixedHeight: "280px" },
+            480: { perPage: 1, gap: "24px", fixedWidth: "90%", fixedHeight: "auto" },
         },
     });
     let restartTimeout;
