@@ -973,13 +973,19 @@ page > modal
 .modal-open-button {
   display: inline-block;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
-  width: 320px;
+  width: 200px;
   background-color: var(--bg-black);
   color: var(--font-white);
   border: 1px solid var(--border-white);
   border-radius: 12px;
   padding: 16px;
   margin-top: 32px;
+}
+@media screen and (min-width: 768px) {
+  .modal-open-button {
+    width: 320px;
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=style.css.map */
