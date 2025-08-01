@@ -22,7 +22,7 @@ page > tab-menu
 
 .tab-menu-item {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
     flex: 1;
     display: block;
     text-align: center;
@@ -30,6 +30,9 @@ page > tab-menu
     height: 40px;
     transition: opacity 0.4s;
 
+    @include g.mq(sm) {
+        font-size: 14px;
+    }
     @include g.mq() {
         font-size: 18px;
     }
