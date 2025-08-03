@@ -10,19 +10,13 @@ export const initHamburgerMenu = () => {
         width: [0, 100 + "%"],
     };
 
-    // コンテンツ Opening Option
-    const contentsOpeningOptions = {
-        duration: 200,
-        easing: "ease-out",
-    };
-
     // コンテンツ Closing Keyframe
     const contentsClosingKeyframes = {
         width: [100 + "%", 0],
     };
 
-    // コンテンツ Closing Option
-    const contentsClosingOptions = {
+    // 共通Option
+    const options = {
         duration: 200,
         easing: "ease-out",
     };
@@ -49,12 +43,12 @@ export const initHamburgerMenu = () => {
     const openMenu = () => {
         disableScroll();
         menu.showModal();
-        menu.animate(contentsOpeningKeyframes, contentsOpeningOptions);
+        menu.animate(contentsOpeningKeyframes, options);
     };
     // メニューcloseする関数
     const closeMenu = (animate = true) => {
         if (animate) {
-            const closingAnim = menu.animate(contentsClosingKeyframes, contentsClosingOptions);
+            const closingAnim = menu.animate(contentsClosingKeyframes, options);
 
             // アニメーションの完了後
             closingAnim.onfinish = () => {
