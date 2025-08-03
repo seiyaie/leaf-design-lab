@@ -62,4 +62,24 @@ export const initAccordion = () => {
             }
         });
     });
+
+    // アコーディオン外クリックで閉じる
+    document.addEventListener("click", (e) => {
+        const isInsideAccordion = [...details].some((detail) =>
+            detail.contains(e.target)
+        );
+
+        if (!isInsideAccordion) {
+            details.forEach((el) => {
+                if (el.open && el.dataset.isAnimation !== "true") {
+                    const content = el.querySelector(".js-accordion-content");
+                    const closeAnimation = content.animate(closingKeyframes(content), options);
+                    closeAnimation.onfinish = () => {
+                        el.removeAttribute("open");
+                        el.dataset.isAnimation = "false";
+                    };
+                }
+            });
+        }
+    });
 };
