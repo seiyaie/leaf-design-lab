@@ -8,7 +8,7 @@ export const initModal = () => {
     // コンテンツ Opening Keyframe
     const contentsOpeningKeyframes = {
         opacity: [0, 1],
-        transform: ["scale(0.98)", "scale(1)"],
+        transform: ["scale(0.95)", "scale(1)"],
     };
 
     // 背景 Opening Keyframe
@@ -33,7 +33,7 @@ export const initModal = () => {
     // コンテンツ Closing Keyframe
     const contentsClosingKeyframes = {
         opacity: [1, 0],
-        transform: ["scale(1)", "scale(0.98)"],
+        transform: ["scale(1)", "scale(0.95)"],
     };
 
     // 背景 Closing Keyframe

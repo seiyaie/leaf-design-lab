@@ -1,7 +1,7 @@
 import { closeSubmenusIfOpen } from "../utility/functions.js";
 
 export const initIntersectionObserver = () => {
-    const kv = document.querySelector(".js-kv");
+    const kv = document.querySelector(".js-kv"); // 監視対象
     const header = document.querySelector(".js-header");
 
     // Opening Keyframe
