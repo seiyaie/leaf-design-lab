@@ -20,22 +20,17 @@ layout > header > header
     align-items: center;
     padding-inline: 16px;
     @include g.mq() {
+        padding-inline: 32px;
         height: 108px;
         grid-template-columns: 1fr auto;
     }
     @include g.mq(lg) {
-        padding-inline: 32px;
+        padding-inline: 64px;
     }
     &.is-fixed {
         position: fixed;
         width: 100%;
     }
-}
-
-.header-inner {
-    width: 90%;
-    height: 100%;
-    margin-inline: auto;
 }
 
 .header-logo {
