@@ -59,6 +59,7 @@ page > tab-menu
     font-size: 12px;
     display: none;
     padding: 20px;
+    min-height: 200px;
     @include g.mq() {
         font-size: 16px;
     }

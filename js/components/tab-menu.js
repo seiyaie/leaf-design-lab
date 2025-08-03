@@ -1,6 +1,7 @@
 export const initTabMenu = () => {
-    const menuItems = document.querySelectorAll(".js-tab-menu-item");
-    const menuContents = document.querySelectorAll(".js-tab-menu-content");
+    // query selectors
+    const tabs = document.querySelectorAll("[data-button]");
+    const contents = document.querySelectorAll("[data-content]");
 
     const openingKeyframes = {
         opacity: [0, 1],
@@ -13,18 +14,29 @@ export const initTabMenu = () => {
         fill: "forwards",
     };
 
-    for (let i = 0; i < menuItems.length; i++) {
-        menuItems[i].addEventListener("click", () => {
-            menuItems.forEach((item) => {
-                item.classList.remove("is-active");
-            });
-            menuItems[i].classList.add("is-active");
+    // tab menu 切り替え関数
+    const tabClick = (e) => {
+        // クリックされたtab
+        const targetTab = e.target;
 
-            menuContents.forEach((content) => {
-                content.classList.remove("is-active");
-            });
-            menuContents[i].classList.add("is-active");
-            menuContents[i].animate(openingKeyframes, options);
-        });
-    }
+        //クリックされたdata-buttonの値
+        const targetValue = e.target.dataset.button;
+
+        //クリックされたtabに対応するcontents
+        const targetContent = document.querySelector(`[data-content="${targetValue}"]`);
+
+        //全てのis-activeをremove
+        [...tabs, ...contents].forEach((item) => item.classList.remove("is-active"));
+
+        //クリックしたタブにis-activeをadd
+        targetTab.classList.add("is-active");
+
+        //クリックしたコンテンツにis-activeをadd
+        targetContent.classList.add("is-active");
+        targetContent.animate(openingKeyframes, options);
+    };
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", (e) => tabClick(e));
+    });
 };

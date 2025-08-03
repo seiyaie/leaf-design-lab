@@ -874,6 +874,7 @@ page > tab-menu
   font-size: 12px;
   display: none;
   padding: 20px;
+  min-height: 200px;
 }
 @media screen and (min-width: 768px) {
   .tab-menu-content {
