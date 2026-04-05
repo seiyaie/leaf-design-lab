@@ -1,7 +1,7 @@
 # Webサイト：Leaf Design Lab（WordPress Theme）
 
 
-![Leaf Design Lab サムネイル](./img/docs/thumbnail.jpg)
+![Leaf Design Lab サムネイル](./assets/img/docs/thumbnail.jpg)
 
 ## 概要
 
