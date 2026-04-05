@@ -1,5 +1,8 @@
 # Webサイト：Leaf Design Lab（WordPress Theme）
 
+
+![Leaf Design Lab サムネイル](./img/docs/thumbnail.jpg)
+
 ## 概要
 
 架空のWeb制作会社「Leaf Design Lab」のコーポレートサイトとして制作したWordPressテーマです。  
