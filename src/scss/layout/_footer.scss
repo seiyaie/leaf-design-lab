@@ -1,0 +1,122 @@
+@use "../global" as g;
+
+/*!
+layout > footer
+------------------------------
+*/
+
+.l-footer {
+    background-color: var(--color-bg-secondary);
+    padding-block: var(--space-64);
+}
+
+.l-footer__inner {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.l-footer__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include g.mq() {
+        grid-template-columns: 60% 1fr;
+        justify-content: space-between;
+    }
+}
+
+.l-footer__brand-description {
+    margin-top: var(--space-24);
+    color: var(--color-neutral-400);
+    max-width: 350px;
+}
+
+.l-footer__brand-description span {
+    display: block;
+    line-height: 1.6;
+}
+
+.l-footer__middle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: var(--space-40);
+    @include g.mq() {
+        margin-top: 0;
+    }
+}
+
+.l-footer__group-title {
+    color: var(--color-neutral-300);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+}
+
+.l-footer__group-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin-top: var(--space-16);
+}
+
+.l-footer__group-link {
+    color: var(--color-neutral-400);
+    font-size: 14px;
+    transition: color 0.3s;
+    @include g.mq() {
+        font-size: 16px;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--color-neutral-200);
+        }
+    }
+}
+
+.l-footer__bottom {
+    margin-top: var(--space-40);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-muted);
+    font-family: var(--font-family-mono);
+    padding-top: var(--space-24);
+    @include g.mq() {
+        align-items: center;
+        margin-top: var(--space-64);
+    }
+}
+
+.l-footer__copyright {
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    line-height: 1;
+    @include g.mq() {
+        font-size: 16px;
+        margin-top: 0;
+    }
+}
+
+.l-footer__legal {
+    display: flex;
+    gap: var(--space-40);
+    justify-content: center;
+    @include g.mq() {
+        margin-top: 0;
+    }
+}
+
+.l-footer__legal-link {
+    font-size: 14px;
+    line-height: 1;
+    transition: color 0.3s;
+    @include g.mq() {
+        font-size: 16px;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--color-neutral-200);
+        }
+    }
+}

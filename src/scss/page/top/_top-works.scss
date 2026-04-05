@@ -1,0 +1,20 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-works
+------------------------------
+*/
+
+.p-top-works__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-40);
+    @include g.mq() {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.p-top-works__button {
+    display: flex;
+    justify-content: flex-end;
+}

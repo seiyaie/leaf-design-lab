@@ -1,0 +1,21 @@
+@use "../global" as g;
+
+/*!
+component > date
+------------------------------
+*/
+
+.c-date {
+    font-family: var(--font-family-mono);
+    color: var(--color-neutral-400);
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.c-date--sm {
+    font-size: 12px;
+}
+
+.c-date--md {
+    font-size: 14px;
+}

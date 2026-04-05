@@ -1,0 +1,84 @@
+@use "../global" as g;
+
+/*!
+component > post-nav
+------------------------------
+*/
+
+.c-post-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-24);
+}
+
+.c-post-nav__button {
+    display: flex;
+    gap: var(--space-8);
+    color: var(--color-text-muted);
+    font-weight: bold;
+    transition:
+        color 0.3s,
+        transform 0.3s;
+    max-width: calc(50% - 24px);
+    @include g.mq() {
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--color-text-base);
+        }
+    }
+}
+
+.c-post-nav__button--prev {
+    @media (any-hover: hover) {
+        &:hover {
+            transform: translateX(-8px);
+        }
+    }
+}
+
+.c-post-nav__button--next {
+    margin-left: auto;
+    @media (any-hover: hover) {
+        &:hover {
+            transform: translateX(8px);
+        }
+    }
+}
+
+.c-post-nav__icon {
+    display: inline-block;
+    flex-shrink: 0;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: currentColor;
+    width: 18px;
+    aspect-ratio: 1/1;
+    transition: background-color 0.3s;
+    @include g.mq() {
+        width: 24px;
+    }
+}
+
+.c-post-nav__icon--prev {
+    mask-image: url("../img/icons/arrow-left.svg");
+}
+
+.c-post-nav__icon--next {
+    mask-image: url("../img/icons/arrow-right.svg");
+}
+
+.c-post-nav__meta {
+    font-size: 12px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include g.mq(sm) {
+        font-size: 14px;
+    }
+    @include g.mq() {
+        font-size: 16px;
+    }
+}

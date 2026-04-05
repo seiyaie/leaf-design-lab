@@ -1,0 +1,16 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-news
+------------------------------
+*/
+
+.p-top-news__list {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.p-top-news__button {
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,54 @@
+@use "../../global" as g;
+/*!
+page > default > default-archive
+------------------------------
+*/
+
+.p-default-archive {
+  background-color: var(--color-bg-primary);
+}
+
+.p-default-archive__list {
+  margin-top: var(--space-40);
+  border-top: 1px solid var(--color-border-base);
+}
+
+.p-default-archive__item {
+  border-bottom: 1px solid var(--color-border-base);
+}
+
+.p-default-archive__link {
+  display: block;
+  padding-block: var(--space-24);
+}
+
+@media screen and (min-width: 768px) {
+  .p-default-archive__link {
+    padding-block: var(--space-40);
+  }
+}
+
+.p-default-archive__title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: var(--space-8);
+  transition: color 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .p-default-archive__title {
+    font-size: 24px;
+  }
+}
+
+@media (any-hover: hover) {
+  .p-default-archive__link:hover .p-default-archive__title,
+  .p-default-archive__link:hover .c-date {
+    color: var(--color-accent);
+  }
+}
+
+.p-default-archive__empty {
+  margin-top: var(--space-40);
+  color: var(--color-text-muted);
+}

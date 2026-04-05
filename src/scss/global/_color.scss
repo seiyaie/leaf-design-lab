@@ -1,0 +1,30 @@
+/*!
+global > color
+------------------------------
+*/
+
+:root {
+    // back ground color
+    --color-bg-primary: #f5f2ed;
+    --color-bg-secondary: #4a3728;
+    --color-bg-white: #ffffff;
+
+    // text color
+    --color-text-base: #4a3728;
+    --color-text-muted: #78716c;
+    --color-text-white: #ffffff;
+    --color-text-error: #b71c1c;
+
+    // border color
+    --color-border-base: #d6d3d1;
+    --color-border-white: #ffffff;
+    --color-border-secondary: #4a3728;
+
+    // others
+    --color-accent: #8d5b3e;
+    --color-neutral-100: #fafafa;
+    --color-neutral-200: #e7e5e4;
+    --color-neutral-300: #d6d3d1;
+    --color-neutral-400: #a8a29e;
+    --color-neutral-500: #78716c;
+}

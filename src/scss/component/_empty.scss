@@ -1,0 +1,15 @@
+@use "../global" as g;
+
+/*!
+component > empty
+------------------------------
+*/
+
+.c-empty-message {
+    padding-block: var(--space-40);
+    color: var(--color-text-muted);
+    text-align: center;
+    @include g.mq() {
+        padding-block: var(--space-64);
+    }
+}

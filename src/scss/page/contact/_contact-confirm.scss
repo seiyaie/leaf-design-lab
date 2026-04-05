@@ -1,0 +1,71 @@
+@use "../../global" as g;
+
+/*!
+page > contact > contact-confirm
+------------------------------
+*/
+
+.p-contact-confirm {
+    background-color: var(--color-bg-primary);
+}
+
+.p-contact-confirm__inner {
+    display: grid;
+    gap: var(--space-40);
+}
+
+.p-contact-confirm__text {
+    color: var(--color-text-muted);
+}
+
+.p-contact-confirm__form {
+    padding: var(--space-40);
+    background-color: var(--color-bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 40px rgba(74, 55, 40, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-40);
+}
+
+.p-contact-confirm__form-item {
+    padding-block: var(--space-24);
+    border-bottom: 1px solid var(--color-border-base);
+    @include g.mq() {
+        padding-block: var(--space-40);
+    }
+}
+
+.p-contact-confirm__form-label {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+
+.p-contact-confirm__value {
+    margin-top: var(--space-8);
+}
+
+.p-contact-confirm__form-actions {
+    display: flex;
+    gap: var(--space-16);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: var(--space-40);
+}
+
+.p-contact-confirm__form-back-button,
+.p-contact-confirm__form-submit-button {
+    width: min(100%, 240px);
+}
+
+.p-contact-confirm__form-back-button .c-button,
+.p-contact-confirm__form-submit-button .c-button {
+    width: 100%;
+}
+
+.p-contact-confirm__form-back-button .c-button--white {
+    --button-border-color: var(--color-border-secondary);
+}

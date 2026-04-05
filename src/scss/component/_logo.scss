@@ -1,0 +1,74 @@
+@use "../global" as g;
+
+/*!
+component > logo
+------------------------------
+*/
+
+.c-logo {
+    font-family: var(--font-family-accent);
+
+    @media (any-hover: hover) {
+        &:hover .c-logo__icon svg {
+            transform: rotate(16deg);
+        }
+    }
+}
+
+.c-logo--header {
+    .c-logo__text {
+        color: var(--color-text-base);
+    }
+
+    .c-logo__icon {
+        background-color: var(--color-bg-secondary);
+
+        svg {
+            stroke: var(--color-bg-white);
+        }
+    }
+}
+
+.c-logo--footer {
+    .c-logo__text {
+        color: var(--color-text-white);
+    }
+
+    .c-logo__icon {
+        background-color: var(--color-bg-white);
+
+        svg {
+            stroke: var(--color-bg-secondary);
+        }
+    }
+}
+
+.c-logo__link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-12);
+}
+
+.c-logo__text {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+
+.c-logo__icon {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-circle);
+
+    svg {
+        width: 18px;
+        aspect-ratio: 1/1;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: transform 0.3s;
+    }
+}

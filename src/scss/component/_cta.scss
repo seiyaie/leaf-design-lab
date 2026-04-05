@@ -1,0 +1,52 @@
+@use "../global" as g;
+
+/*!
+component > cta
+------------------------------
+*/
+
+.c-cta__inner {
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-40);
+    text-align: center;
+    @include g.mq() {
+        padding: var(--space-64);
+    }
+}
+
+.c-cta__title span {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: var(--font-family-accent);
+    line-height: 1.2;
+    @include g.mq(sm) {
+        font-size: 40px;
+    }
+    @include g.mq() {
+        font-size: 52px;
+    }
+    &:first-child {
+        color: var(--color-text-white);
+    }
+    &:last-child {
+        color: var(--color-accent);
+        font-style: italic;
+    }
+}
+
+.c-cta__text {
+    color: var(--color-neutral-200);
+    max-width: 600px;
+    margin-inline: auto;
+    margin-top: var(--space-24);
+}
+
+.c-cta__button {
+    margin-top: var(--space-40);
+}
+
+.c-cta__button .c-button--white {
+    --button-border-color: var(--color-border-white);
+}

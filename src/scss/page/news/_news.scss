@@ -1,0 +1,15 @@
+@use "../../global" as g;
+
+/*!
+page > news > news
+------------------------------
+*/
+
+.p-news__tag-list {
+    margin-top: var(--space-24);
+}
+
+.p-news__list {
+    display: grid;
+    grid-template-columns: 1fr;
+}

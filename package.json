@@ -1,0 +1,19 @@
+{
+    "name": "leaf-design-lab",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "sass --watch src/scss/app.scss:assets/css/app.css  --style=expanded --no-source-map",
+        "build": "sass src/scss/app.scss:assets/css/app.css --style=compressed --no-source-map"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "@prettier/plugin-php": "^0.25.0",
+        "prettier": "^3.8.1",
+        "sass": "^1.98.0"
+    }
+}

@@ -1,0 +1,55 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-service
+------------------------------
+*/
+
+.p-top-service {
+    background-color: var(--color-bg-primary);
+}
+
+.p-top-service__description {
+    color: var(--color-text-muted);
+    margin-top: var(--space-40);
+}
+
+.p-top-service__list {
+    counter-reset: service-number;
+    display: grid;
+    gap: var(--space-24);
+    margin-top: var(--space-40);
+    @include g.mq() {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.p-top-service__item {
+    counter-increment: service-number;
+    background-color: var(--color-bg-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-40);
+}
+
+.p-top-service__item-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    font-size: 20px;
+    font-weight: bold;
+    &::before {
+        content: counter(service-number, decimal-leading-zero);
+        display: block;
+        font-family: var(--font-family-accent);
+        font-style: italic;
+        font-size: 28px;
+        color: var(--color-neutral-300);
+        line-height: 1;
+    }
+}
+
+.p-top-service__item-text {
+    color: var(--color-text-muted);
+    margin-top: var(--space-16);
+    font-size: 16px;
+}

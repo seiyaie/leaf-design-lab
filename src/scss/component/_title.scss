@@ -1,0 +1,27 @@
+@use "../global" as g;
+
+/*!
+component > title
+------------------------------
+*/
+
+.c-section-title__en {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--color-accent);
+
+    @include g.mq() {
+        font-size: 16px;
+    }
+}
+
+.c-section-title__jp {
+    font-family: var(--font-family-accent);
+    font-size: 32px;
+    font-weight: bold;
+    @include g.mq() {
+        font-size: 48px;
+    }
+}

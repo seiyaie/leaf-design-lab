@@ -1,0 +1,42 @@
+@use "../../global" as g;
+/*!
+page > default > default-page
+------------------------------
+*/
+
+.p-default-page {
+    background-color: var(--color-bg-primary);
+}
+
+.p-default-page__content {
+    margin-top: var(--space-40);
+    color: var(--color-text-muted);
+}
+
+.p-default-page__content > *:first-child {
+    margin-top: 0;
+}
+
+.p-default-page__content h2 {
+    font-family: var(--font-family-accent);
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: var(--space-40);
+    color: var(--color-text-base);
+}
+
+@media screen and (min-width: 768px) {
+    .p-default-page__content h2 {
+        font-size: 28px;
+    }
+}
+
+.p-default-page__content p {
+    margin-top: var(--space-16);
+}
+
+@media screen and (min-width: 768px) {
+    .p-default-page__content p {
+        margin-top: var(--space-24);
+    }
+}

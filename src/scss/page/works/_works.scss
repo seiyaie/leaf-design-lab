@@ -1,0 +1,29 @@
+@use "../../global" as g;
+
+/*!
+page > works > works
+------------------------------
+*/
+
+.p-works {
+    background-color: var(--color-bg-primary);
+}
+
+.p-works__text {
+    margin-top: var(--space-64);
+    max-width: 600px;
+    color: var(--color-text-muted);
+}
+
+.p-works__tag-list {
+    margin-top: var(--space-24);
+}
+
+.p-works__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-40);
+    @include g.mq() {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

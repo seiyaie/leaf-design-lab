@@ -1,0 +1,68 @@
+@use "../global" as g;
+
+/*!
+component > pagination
+------------------------------
+*/
+
+.c-pagination__item-arrow svg {
+    fill: currentColor;
+    width: 24px;
+    aspect-ratio: 1/1;
+}
+
+.c-pagination__list {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-16);
+}
+
+.c-pagination__link {
+    font-weight: bold;
+    color: var(--color-text-muted);
+    width: 48px;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--color-border-base);
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-circle);
+    line-height: 1;
+    transition:
+        background-color 0.3s,
+        color 0.3s,
+        border-color 0.3s;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--color-accent);
+            color: var(--color-text-white);
+            border-color: var(--color-accent);
+        }
+    }
+}
+
+.c-pagination__link--current {
+    background-color: var(--color-accent);
+    color: var(--color-text-white);
+    border-color: var(--color-accent);
+}
+
+.c-pagination__link--dots {
+    pointer-events: none;
+    position: relative;
+    color: transparent;
+}
+
+.c-pagination__link--dots::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 4px;
+    translate: -50% -50%;
+    background:
+        radial-gradient(circle, currentColor 2px, transparent 2.5px) left center / 4px 4px no-repeat,
+        radial-gradient(circle, currentColor 2px, transparent 2.5px) center center / 4px 4px no-repeat,
+        radial-gradient(circle, currentColor 2px, transparent 2.5px) right center / 4px 4px no-repeat;
+    color: var(--color-text-muted);
+}
