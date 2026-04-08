@@ -16,9 +16,12 @@ page > works > works-single
 
 .p-works-single__title {
     font-weight: bold;
-    font-size: 32px;
+    font-size: 20px;
+    @include g.mq(sm) {
+        font-size: 24px;
+    }
     @include g.mq() {
-        font-size: 48px;
+        font-size: 32px;
     }
 }
 
