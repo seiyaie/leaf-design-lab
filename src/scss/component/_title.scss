@@ -19,8 +19,11 @@ component > title
 
 .c-section-title__jp {
     font-family: var(--font-family-accent);
-    font-size: 32px;
     font-weight: bold;
+    font-size: 24px;
+    @include g.mq(sm) {
+        font-size: 32px;
+    }
     @include g.mq() {
         font-size: 48px;
     }

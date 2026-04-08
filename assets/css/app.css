@@ -545,8 +545,13 @@ component > title
 
 .c-section-title__jp {
   font-family: var(--font-family-accent);
-  font-size: 32px;
   font-weight: bold;
+  font-size: 24px;
+}
+@media screen and (min-width: 500px) {
+  .c-section-title__jp {
+    font-size: 32px;
+  }
 }
 @media screen and (min-width: 768px) {
   .c-section-title__jp {
