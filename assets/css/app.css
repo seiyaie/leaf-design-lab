@@ -2042,8 +2042,13 @@ page > news > news-single
 .p-news-single__title {
   font-family: var(--font-family-accent);
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   margin-top: var(--space-24);
+}
+@media screen and (min-width: 500px) {
+  .p-news-single__title {
+    font-size: 24px;
+  }
 }
 @media screen and (min-width: 768px) {
   .p-news-single__title {
