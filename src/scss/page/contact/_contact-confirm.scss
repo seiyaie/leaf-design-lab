@@ -19,13 +19,22 @@ page > contact > contact-confirm
 }
 
 .p-contact-confirm__form {
-    padding: var(--space-40);
+    padding: var(--space-16);
     background-color: var(--color-bg-white);
     border-radius: var(--radius-lg);
     box-shadow: 0 20px 40px rgba(74, 55, 40, 0.05);
     display: flex;
     flex-direction: column;
-    gap: var(--space-40);
+    gap: var(--space-24);
+    @include g.mq(sm) {
+        padding: var(--space-24);
+    }
+    @include g.mq() {
+        padding: var(--space-40);
+    }
+    @include g.mq(lg) {
+        padding: var(--space-40);
+    }
 }
 
 .p-contact-confirm__form-item {

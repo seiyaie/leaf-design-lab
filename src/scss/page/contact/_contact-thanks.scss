@@ -47,8 +47,11 @@ page > contact > contact-thanks
 .p-contact-thanks__title {
     font-weight: bold;
     font-family: var(--font-family-accent);
-    font-size: 48px;
+    font-size: 32px;
     padding-block: var(--space-40);
+    @include g.mq(sm) {
+        font-size: 48px;
+    }
     @include g.mq() {
         font-size: 60px;
         padding-block: var(--space-64);
@@ -66,17 +69,13 @@ page > contact > contact-thanks
 .p-contact-thanks__title span:last-child {
     color: var(--color-accent);
     font-style: italic;
-    margin-left: 2em;
+    margin-left: 1em;
 }
 
 .p-contact-thanks__text {
     margin-top: var(--space-40);
-    font-size: 16px;
     line-height: 1.6;
     color: var(--color-text-muted);
-    @include g.mq() {
-        font-size: 18px;
-    }
 }
 
 .p-contact-thanks__text span {

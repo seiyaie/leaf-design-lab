@@ -2177,6 +2177,11 @@ page > contact > contact
   }
 }
 
+.p-contact__head,
+.p-contact__form {
+  min-width: 0;
+}
+
 .p-contact__text {
   color: var(--color-text-muted);
 }
@@ -2205,7 +2210,7 @@ form
 ------------------------------
 */
 .p-contact__form .wpcf7-form {
-  padding: var(--space-40);
+  padding: var(--space-16);
   background-color: var(--color-bg-white);
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 40px rgba(74, 55, 40, 0.05);
@@ -2213,9 +2218,19 @@ form
   flex-direction: column;
   gap: var(--space-24);
 }
+@media screen and (min-width: 500px) {
+  .p-contact__form .wpcf7-form {
+    padding: var(--space-24);
+  }
+}
 @media screen and (min-width: 768px) {
   .p-contact__form .wpcf7-form {
-    padding: var(--space-64);
+    padding: var(--space-40);
+  }
+}
+@media screen and (min-width: 1080px) {
+  .p-contact__form .wpcf7-form {
+    padding: var(--space-40);
   }
 }
 
@@ -2350,8 +2365,11 @@ form
   margin: 0;
 }
 
-.wpcf7-turnstile {
-  text-align: center;
+.p-contact__form-turnstile {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /*!
@@ -2372,13 +2390,28 @@ page > contact > contact-confirm
 }
 
 .p-contact-confirm__form {
-  padding: var(--space-40);
+  padding: var(--space-16);
   background-color: var(--color-bg-white);
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 40px rgba(74, 55, 40, 0.05);
   display: flex;
   flex-direction: column;
-  gap: var(--space-40);
+  gap: var(--space-24);
+}
+@media screen and (min-width: 500px) {
+  .p-contact-confirm__form {
+    padding: var(--space-24);
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-contact-confirm__form {
+    padding: var(--space-40);
+  }
+}
+@media screen and (min-width: 1080px) {
+  .p-contact-confirm__form {
+    padding: var(--space-40);
+  }
 }
 
 .p-contact-confirm__form-item {
@@ -2477,8 +2510,13 @@ page > contact > contact-thanks
 .p-contact-thanks__title {
   font-weight: bold;
   font-family: var(--font-family-accent);
-  font-size: 48px;
+  font-size: 32px;
   padding-block: var(--space-40);
+}
+@media screen and (min-width: 500px) {
+  .p-contact-thanks__title {
+    font-size: 48px;
+  }
 }
 @media screen and (min-width: 768px) {
   .p-contact-thanks__title {
@@ -2500,19 +2538,13 @@ page > contact > contact-thanks
 .p-contact-thanks__title span:last-child {
   color: var(--color-accent);
   font-style: italic;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 .p-contact-thanks__text {
   margin-top: var(--space-40);
-  font-size: 16px;
   line-height: 1.6;
   color: var(--color-text-muted);
-}
-@media screen and (min-width: 768px) {
-  .p-contact-thanks__text {
-    font-size: 18px;
-  }
 }
 
 .p-contact-thanks__text span {
