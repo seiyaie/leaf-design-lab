@@ -8,13 +8,17 @@ page > top > top-kv
 .p-top-kv {
     position: relative;
     background-color: var(--color-bg-primary);
-    padding-top: calc(var(--header-height) + var(--space-40));
-    padding-bottom: var(--space-40);
+    padding-top: calc(var(--header-height) + var(--space-24));
+    padding-bottom: var(--space-24);
     width: 100%;
     overflow: hidden;
-    height: 100vh;
+    height: 100svh;
     min-height: 670px;
     max-height: 800px;
+    @include g.mq(sm) {
+        padding-top: calc(var(--header-height) + var(--space-40));
+        padding-bottom: var(--space-40);
+    }
     @include g.mq() {
         padding-top: calc(var(--header-height) + var(--space-64));
         padding-bottom: var(--space-64);
