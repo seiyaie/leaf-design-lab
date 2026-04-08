@@ -23,8 +23,11 @@ page > top > top-faq
     user-select: none;
     padding-block: var(--space-24);
     font-weight: bold;
-    font-size: 18px;
     position: relative;
+    font-size: 16px;
+    @include g.mq() {
+        font-size: 18px;
+    }
 }
 
 .p-top-faq__question::-webkit-details-marker {

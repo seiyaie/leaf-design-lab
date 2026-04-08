@@ -1,6 +1,5 @@
 # Webサイト：Leaf Design Lab（WordPress Theme）
 
-
 ![Leaf Design Lab サムネイル](./assets/img/docs/thumbnail.jpg)
 
 ## 概要
@@ -14,9 +13,9 @@
 
 ## 制作情報
 
-- 作品名：leaf design lab  
-- 制作月：2026.04  
-- 制作期間：2週間  
+- 作品名：leaf design lab
+- 制作月：2026.04
+- 制作期間：2週間
 
 ---
 
@@ -26,7 +25,6 @@ https://portfolio.itsseiya.com/leaf-design-lab/
 
 ---
 
-    
 ## 使用技術
 
 - WordPress
