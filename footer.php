@@ -50,7 +50,7 @@
 
         <!-- bottom bar -->
         <div class="l-footer__bottom">
-            <p class="l-footer__copyright">© <?php echo esc_html(wp_date('Y')); ?> Leaf Design Lab. All Rights Reserved.</p>
+            <p class="l-footer__copyright"><span>© <?php echo esc_html(wp_date('Y')); ?> Leaf Design Lab.</span><span> All Rights Reserved.</span></p>
             <div class="l-footer__legal">
 
                 <!-- privacy policy -->

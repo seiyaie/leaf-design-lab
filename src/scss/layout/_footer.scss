@@ -88,22 +88,39 @@ layout > footer
 }
 
 .l-footer__copyright {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.2;
     text-align: center;
-    display: block;
-    line-height: 1;
+    @include g.mq(sm) {
+        font-size: 14px;
+    }
     @include g.mq() {
         font-size: 16px;
-        margin-top: 0;
+    }
+}
+
+.l-footer__copyright span {
+    display: block;
+    @include g.mq() {
+        display: inline-block;
+    }
+}
+
+.l-footer__copyright span:last-child {
+    @include g.mq() {
+        margin-left: 0.5em;
     }
 }
 
 .l-footer__legal {
     display: flex;
-    gap: var(--space-40);
+    gap: var(--space-24);
+    flex-direction: column;
     justify-content: center;
+    margin-top: var(--space-24);
     @include g.mq() {
-        margin-top: 0;
+        gap: var(--space-40);
+        flex-direction: row;
     }
 }
 
@@ -111,6 +128,7 @@ layout > footer
     font-size: 14px;
     line-height: 1;
     transition: color 0.3s;
+    text-align: center;
     @include g.mq() {
         font-size: 16px;
     }
