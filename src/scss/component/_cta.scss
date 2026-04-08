@@ -17,15 +17,15 @@ component > cta
 
 .c-cta__title span {
     display: block;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     font-family: var(--font-family-accent);
     line-height: 1.2;
     @include g.mq(sm) {
-        font-size: 40px;
+        font-size: 32px;
     }
     @include g.mq() {
-        font-size: 52px;
+        font-size: 48px;
     }
     &:first-child {
         color: var(--color-text-white);

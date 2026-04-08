@@ -794,19 +794,19 @@ component > cta
 
 .c-cta__title span {
   display: block;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   font-family: var(--font-family-accent);
   line-height: 1.2;
 }
 @media screen and (min-width: 500px) {
   .c-cta__title span {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 @media screen and (min-width: 768px) {
   .c-cta__title span {
-    font-size: 52px;
+    font-size: 48px;
   }
 }
 .c-cta__title span:first-child {
