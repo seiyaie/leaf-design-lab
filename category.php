@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php $current_term = get_queried_object(); ?>
 <!-- news -->
 <main class="p-news u-header-offset">
     <div class="l-container">
@@ -13,7 +14,7 @@
                 <?php
                 get_template_part('template-parts/news/filter', null, [
                     'is_home' => false,
-                    'current_category' => get_queried_object(),
+                    'current_category' => $current_term,
                 ]);
                 ?>
             </div>
